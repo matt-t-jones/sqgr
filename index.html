@@ -1,9 +1,75 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<title>our style</title>
-</head>
-<body>
-<h1>you thate to see it</h1>
-</body>
+    <head>
+        <title>our style</title>
+    </head>
+    <body>
+        <p style="position: absolute; top: 0; right: 0; text-align: right; font-size: 2.5em; margin: 0 20px 20px 0"><a href="">our story</a></p>
+        <div style="width: 100%; text-align: center"><img src="nc.png" style="width: 50%;"></div>
+        <div class="flex">
+            <div class="steam"><a href="https://steamcommunity.com/groups/SquishedLikeGrape"><img src="steam.svg" /></a></div>
+            <div class="youtube"><a href="https://www.youtube.com/channel/UCuzHghDRffQg8QVW9xM4kqA"><img src="youtube.svg" /></a></div>
+            <div class="discord"><a href="https://discord.gg/mz9QeGM"><img src="discord.svg" /></a></div>
+        </div>
+        <details class="form"><summary>Has what ti takes?</summary>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhsU7h3nR_rv4zxARCQwIWyAWyCC2IEZiZNpix3M5p0LDhsw/viewform?embedded=true" frameborder="0"></iframe>
+        </details>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+            a, a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            .flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+            }
+            .flex > div {
+                width: 33%;
+                text-align: center;
+                margin: 40px;
+            }
+            .flex > div > a > img {
+                width: 60%;
+                transition: all .2s ease-in-out;
+            }
+            .flex > div > a:hover > img {
+                transform: scale(1.1);
+            }
+            .form {
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                height: 50vh;
+            }
+            .form > iframe {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                height: 50vh;
+            }
+            summary {
+                cursor: pointer;
+                text-align: center;
+                font-size: 3em;
+            }
+            @media screen and (max-width:990px) {
+                .flex { 
+                    flex-wrap: wrap;
+                }
+                .flex > div {
+                    width: 100%;
+                }
+                .flex > div > a > img {
+                    width: 45%;
+                }
+            }
+        </style>
+    </body>
 </html>
