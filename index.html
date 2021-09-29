@@ -2,17 +2,21 @@
 <html>
     <head>
         <title>our style</title>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />]
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
-    <body>
-        <p style="position: absolute; top: 0; right: 0; text-align: right; font-size: 2.5em; margin: 0 20px 20px 0"><a href="">our story</a></p>
+    <body onload="javascript:jumpScroll()">
+        <video id="bg" controls preload="true" autoplay loop muted>   
+            <source src="ns.webm?" type="video/webm" > 
+        </video>
+        <p style="position: absolute; top: 0; right: 0; text-align: right; font-size: 2.5em; margin: 0 20px 20px 0"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQHoHeQ1yymSpjTkElArzSa2NXBYiw6Pf-9eDzUqf4C7iCr-TQL_uqO1JpooU5MT8-AwwbBNiBIID4l/pub?start=true&loop=false&delayms=3000&slide=id.p">our story</a></p>
         <div class="cock"><img src="nc.png" style="width: 50%;"></div>
         <div class="flex">
             <div class="steam"><a href="https://steamcommunity.com/groups/SquishedLikeGrape"><img src="steam.svg" /></a></div>
             <div class="youtube"><a href="https://www.youtube.com/channel/UCuzHghDRffQg8QVW9xM4kqA"><img src="youtube.svg" /></a></div>
             <div class="discord"><a href="https://discord.gg/mz9QeGM"><img src="discord.svg" /></a></div>
         </div>
-        <details class="form"><summary>Has what ti takes?</summary>
+        <details class="form" id="form"><summary>Has what ti takes?</summary>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhsU7h3nR_rv4zxARCQwIWyAWyCC2IEZiZNpix3M5p0LDhsw/viewform?embedded=true" frameborder="0"></iframe>
         </details>
         <style>
@@ -20,6 +24,28 @@
                 background-color: black;
                 color: white;
                 font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+            video#bg {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: auto;
+                min-width: 100%;
+                height: auto;
+                min-height: 100%;
+                z-index: -10;    
+                background-size: cover;
+            }
+            video#bg:before {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: auto;
+                min-width: 100%;
+                height: auto;
+                min-height: 100%;
+                z-index: -5;  
+                background:linear-gradient(to right,rgba(65, 0, 255, 0.4),rgba(255, 0, 232, 0.3));
             }
             a, a:visited {
                 color: white;
@@ -42,6 +68,9 @@
             }
             .flex > div > a:hover > img {
                 transform: scale(1.1);
+            }
+            #form {
+                display: none;
             }
             .form {
                 width: 40%;
@@ -82,5 +111,10 @@
                 }
             }
         </style>
+        <script>
+        window.onload = function() {
+            $("#form").fadeIn();
+        }
+        </script>
     </body>
 </html>
