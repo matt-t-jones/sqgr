@@ -12,7 +12,7 @@
         <p id="story">
             <a href="https://docs.google.com/presentation/d/e/2PACX-1vQHoHeQ1yymSpjTkElArzSa2NXBYiw6Pf-9eDzUqf4C7iCr-TQL_uqO1JpooU5MT8-AwwbBNiBIID4l/pub?start=true&loop=false&delayms=3000&slide=id.p">our story</a>
         </p>
-        <div class="cock"><img src="nc.png" style="width: 50%;"></div>
+        <div class="cock"><img src="nc.png"></div>
         <div class="flex">
             <div class="steam"><a href="https://steamcommunity.com/groups/SquishedLikeGrape"><img src="steam.svg" /></a></div>
             <div class="youtube"><a href="https://www.youtube.com/channel/UCuzHghDRffQg8QVW9xM4kqA"><img src="youtube.svg" /></a></div>
@@ -26,6 +26,17 @@
                 background-color: black;
                 color: white;
                 font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+            video#bg {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: auto;
+                min-width: 100%;
+                height: auto;
+                min-height: 100%;
+                z-index: -10;    
+                background-size: cover;
             }
             a, a:visited {
                 color: white;
@@ -70,6 +81,9 @@
                 width: 100%;
                 text-align: center;
             }
+            .cock > img {
+                width: 50%;
+            }
             @font-face {
                 font-family: 'Comic Sans MS';
                 src: url("comici.ttf");
@@ -92,6 +106,9 @@
                 }
                 #bg {
                     display: none;
+                }
+                .cock > img {
+                    width: 85%;
                 }
             }
         </style>
