@@ -9,16 +9,18 @@
         <video id="bg" controls preload="true" autoplay loop muted>   
             <source src="ns.webm?" type="video/webm" > 
         </video>
-        <p style="position: absolute; top: 0; right: 0; text-align: right; font-size: 2.5em; margin: 0 20px 20px 0"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQHoHeQ1yymSpjTkElArzSa2NXBYiw6Pf-9eDzUqf4C7iCr-TQL_uqO1JpooU5MT8-AwwbBNiBIID4l/pub?start=true&loop=false&delayms=3000&slide=id.p">our story</a></p>
+        <p id="story">
+            <a href="https://docs.google.com/presentation/d/e/2PACX-1vQHoHeQ1yymSpjTkElArzSa2NXBYiw6Pf-9eDzUqf4C7iCr-TQL_uqO1JpooU5MT8-AwwbBNiBIID4l/pub?start=true&loop=false&delayms=3000&slide=id.p">our story</a>
+        </p>
         <div class="cock"><img src="nc.png" style="width: 50%;"></div>
         <div class="flex">
             <div class="steam"><a href="https://steamcommunity.com/groups/SquishedLikeGrape"><img src="steam.svg" /></a></div>
             <div class="youtube"><a href="https://www.youtube.com/channel/UCuzHghDRffQg8QVW9xM4kqA"><img src="youtube.svg" /></a></div>
             <div class="discord"><a href="https://discord.gg/mz9QeGM"><img src="discord.svg" /></a></div>
         </div>
-        <details class="form" id="form"><summary>Has what ti takes?</summary>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhsU7h3nR_rv4zxARCQwIWyAWyCC2IEZiZNpix3M5p0LDhsw/viewform?embedded=true" frameborder="0"></iframe>
-        </details>
+        <p id="form" style="text-align: center; font-size: 3em; width: 80%; margin-left: auto; margin-right: auto">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhsU7h3nR_rv4zxARCQwIWyAWyCC2IEZiZNpix3M5p0LDhsw/viewform" target="_blank">Has what ti takes?</a>
+        </p>
         <style>
             body {
                 background-color: black;
@@ -66,24 +68,21 @@
                 width: 60%;
                 transition: all .2s ease-in-out;
             }
-            .flex > div > a:hover > img {
+            #story {
+                position: absolute;
+                top: 0;
+                right: 0;
+                text-align: right;
+                font-size: 2.5em;
+                margin: 0 20px 20px 0;
+            }
+            #form, #story {
+                transition: all .2s ease-in-out;
+            }
+            .flex > div > a:hover > img, #form:hover, #story:hover {
                 transform: scale(1.1);
             }
-            #form {
-                display: none;
-            }
-            .form {
-                width: 40%;
-                margin-left: auto;
-                margin-right: auto;
-                height: 50vh;
-            }
-            .form > iframe {
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                height: 50vh;
-            }
+
             summary {
                 cursor: pointer;
                 text-align: center;
@@ -93,7 +92,14 @@
                 width: 100%;
                 text-align: center;
             }
+            @font-face {
+                font-family: 'Comic Sans MS';
+                src: url("comic-sans-ms/comici.ttf");
+            }
             @media screen and (max-width:990px) {
+                p {
+                    font-size: 5em !important;
+                }
                 .flex { 
                     flex-wrap: wrap;
                 }
@@ -102,9 +108,6 @@
                 }
                 .flex > div > a > img {
                     width: 45%;
-                }
-                .form {
-                    width: 90%
                 }
                 .cock {
                     margin-top: 15vh;
