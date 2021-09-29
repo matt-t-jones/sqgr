@@ -3,7 +3,6 @@
     <head>
         <title>our style</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body onload="javascript:jumpScroll()">
         <video id="bg" controls preload="true" autoplay loop muted>   
@@ -89,7 +88,7 @@
             }
             @media screen and (max-width:990px) {
                 html {
-                    background: url(bg.png?) no-repeat center center fixed;
+                    background: url(bg.png?) repeat-y center center fixed;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;
                     -o-background-size: cover;
@@ -118,10 +117,5 @@
                 }
             }
         </style>
-        <script>
-        window.onload = function() {
-            $("#form").fadeIn();
-        }
-        </script>
     </body>
 </html>
