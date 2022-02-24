@@ -1,21 +1,23 @@
-<!doctype html>
-<!-- we're not a clan, we're a family. -->
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>our style</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
-    <body onload="javascript:jumpScroll()">
+    <body>
         <video id="bg" controls preload="true" autoplay loop muted>   
             <source src="ns.webm?" type="video/webm" > 
         </video>
+		<audio id="ramranch">
+			  <source src="ramranch.mp3">
+		</audio>
         <div id="mc">
             <a href="https://map.squishgrape.com" target="_blank"><img src="mc.png" /></a>
         </div>
         <p id="story">
             <a href="https://docs.google.com/presentation/d/e/2PACX-1vQHoHeQ1yymSpjTkElArzSa2NXBYiw6Pf-9eDzUqf4C7iCr-TQL_uqO1JpooU5MT8-AwwbBNiBIID4l/pub?start=true&loop=false&delayms=3000&slide=id.p" target="_blank">our story</a>
         </p>    
-        <div class="cock"><img src="nc.png"></div>
+        <div id="cock" class="cock" onclick="doit()"><img src="nc.png"></div>
         <div class="flex">
             <div class="steam"><a href="https://steamcommunity.com/groups/SquishedLikeGrape" target="_blank"><img src="steam.svg" /></a></div>
             <div class="youtube"><a href="https://www.youtube.com/channel/UCuzHghDRffQg8QVW9xM4kqA" target="_blank"><img src="youtube.svg" /></a></div>
@@ -142,5 +144,11 @@
                 }
             }
         </style>
+		<script type="text/javascript">
+		
+		function doit() {
+		document.getElementById("ramranch").play()
+		}
+		</script>
     </body>
 </html>
