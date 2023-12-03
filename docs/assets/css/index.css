@@ -1,0 +1,58 @@
+body {
+	color: white;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+video#bg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	z-index: -10;    
+	background-size: cover;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20vh;
+}
+.flex > div {
+	width: 33%;
+	text-align: center;
+	margin: 40px;
+}
+.flex > div > a > img {
+	width: 60%;
+	transition: all .2s ease-in-out;
+}
+
+.flex > div > a:hover > img {
+	transform: scale(1.1);
+}
+@media screen and (max-width:990px) {
+	html {
+		background: url(../img/bg.png?) repeat-y center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	p {
+		font-size: 3.5em !important;
+	}
+	.flex { 
+		flex-wrap: wrap;
+	}
+	.flex > div {
+		width: 100%;
+	}
+	.flex > div > a > img {
+		width: 45%;
+	}
+	#bg {
+		display: none;
+	}
+}
