@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>minecraft maps</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://squishgrape.com/assets/img/favicon.ico" />
+		<link rel="stylesheet" href="assets/css/map.css?rev=20240804" type="text/css" />
+    </head>
+    <body id="body">
+		<div id="current_bg"></div>
+		<div id="april2021_bg"></div>
+		<div id="october2020_bg"></div>
+		<div id="june2020_bg"></div>
+        <div class="flex main">
+            <div class="break"><p><a class="back-home" href="https://squishgrape.com">Home</a></p></div>
+            <div class="map-select">
+                <h1>Select the map you want to view</h1>
+                <h2>Current Map (est. December 2021)</h2>
+                <input type="radio" id="current" name="map" onclick="switchMap('current')" checked>
+                <label for="current">SquishGrape Vanilla 1.21</label>
+                <div class="buttons" id="buttons_current">
+                    <a class="blue newtab" href="https://map.squishgrape.com/current/" target="_blank">Overviewer (rendered 08/02/2024)</a>
+                </div>
+                <h2>Older maps</h2>
+                <div class="flex inner-flex">
+                    <input type="radio" id="april2021" name="map" onclick="switchMap('april2021')">
+                    <label for="april2021">April 2021</label>
+                    
+
+                    <input type="radio" id="october2020" name="map" onclick="switchMap('october2020')">
+                    <label for="october2020">October 2020</label>
+                    
+
+                    <input type="radio" id="june2020" name="map" onclick="switchMap('june2020')">
+                    <label for="june2020">June 2020</label>
+                    
+
+                    <div class="buttons" id="buttons_april2021">
+                        <a class="blue newtab" href="https://map.squishgrape.com/april_2021/" target="_blank">Overviewer</a>
+                        <a class="green download" href="https://map.squishgrape.com/april_2021/april_2021.zip">Download</a>
+                    </div>
+                    <div class="buttons" id="buttons_october2020">
+                        <a class="blue newtab" href="https://map.squishgrape.com/october_2020/" target="_blank">Overviewer</a>
+                        <a class="green download" href="https://map.squishgrape.com/october_2020/october_2020.zip">Download</a>
+                    </div>
+                    <div class="buttons" id="buttons_june2020">
+                        <a class="blue newtab" href="https://map.squishgrape.com/june_2020/" target="_blank">Overviewer</a>
+                        <a class="green download" href="https://map.squishgrape.com/june_2020/june_2020.zip">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/main.js?rev=20240804"></script>
+    </body>
+</html>

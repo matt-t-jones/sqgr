@@ -1,0 +1,160 @@
+* {
+	font-family: "Fira Sans Regular", sans-serif;
+}
+@font-face {
+	font-family: 'Fira Sans Regular';
+	src: url("../font/FiraSans-Regular.ttf");
+}
+body {
+	background-color: black;
+	color: white;
+	transition: 0.2s ease-in-out;
+}
+a, a:visited, a:hover {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a.back-home {
+	padding-left: 20px;
+	font-size: 1.2rem;
+}
+a.back-home::before {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	vertical-align: middle;
+  	content: url('../../assets/img/house.svg');
+	filter: invert(100%);
+	padding-right: 0.5rem;
+}
+#current_bg, #april2021_bg, #october2020_bg, #june2020_bg {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	transition: opacity 0.5s ease;
+}
+#current_bg {
+	background-image: url('../../assets/img/current.jpg?rev=08-2024');
+	opacity: 1;
+}
+#april2021_bg {
+	background-image: url('../../assets/img/april2021.jpg');
+	opacity: 0;
+}
+#october2020_bg {
+	background-image: url('../../assets/img/october2020.jpg');
+	opacity: 0;
+}
+#june2020_bg {
+	background-image: url('../../assets/img/june2020.jpg');
+	opacity: 0;
+}
+.flex {
+	 display: flex;
+	 justify-content: space-evenly;
+	 flex-wrap: wrap;
+}
+.break {
+	flex-basis: 100%;
+	height: 0;
+	margin-bottom: 10vh;
+}
+.map-select {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 50%;
+	border-radius: 7px;
+	padding: 30px;
+
+}
+.map-select input[type="radio"] {
+	display: none;
+}
+.map-select label {
+	display: block;
+	text-align: center;
+	background-color: rgba(255,255,255,0.2);
+	margin-bottom: 20px;
+	padding: 10px 12px;
+	font-size: 30px;
+	padding-left: 6px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.map-select > label {
+	width: 100%;
+}
+.map-select > .inner-flex > label {
+	width: 30%;
+}
+.map-select input[type="radio"]:checked+label {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.map-select a {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	border-radius: 7px;
+	padding: 5px 10px;
+	font-size: 24px;
+}
+.map-select a::after {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	vertical-align: middle;
+	filter: invert(100%);
+	padding-left: 0.5rem;
+}
+.map-select a.newtab::after {
+	content: url('../../assets/img/up-right-from-square.svg');
+}
+.map-select a.download::after {
+	content: url('../../assets/img/download.svg');
+}
+.buttons {
+	display: none;
+	justify-content: space-evenly;
+	width: 100%;
+	transition: background-color 0.25s linear;
+}
+.buttons a.green {
+	background-color: green;
+	transition: background-color 0.25s linear;
+}
+.buttons a.green:hover {
+	background-color: darkgreen;
+	transition: background-color 0.25s linear;
+}
+.buttons a.blue {
+	background-color: blue;
+	transition: background-color 0.25s linear;
+}
+.buttons a.blue:hover {
+	background-color: darkblue;
+	transition: background-color 0.25s linear;
+}
+.buttons a.red {
+	background-color: red;
+}
+.map-select label:focus+div.buttons {
+	display: flex;
+}
+@media screen and (max-width:990px) {
+	.map-select {
+		width: 95%;
+	}
+	.map-select > .inner-flex > label {
+		width: 100%;
+	}
+	a.back-home {
+		font-size: 1.6rem;
+	}
+}
